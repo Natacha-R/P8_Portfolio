@@ -1,0 +1,20 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+// conteneurs des cartes logements, page "Accueil"
+
+.AccommodationList {
+  padding: 50px;
+  background-color: $secondary-color;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 30%);
+  grid-gap: 50px;
+  justify-content: space-evenly;
+  margin-bottom: $margin-xl;
+
+  @include respond-to(tablet) {
+    padding: 0;
+    display: inline;
+  }
+}

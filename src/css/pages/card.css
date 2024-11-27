@@ -1,0 +1,84 @@
+.card {
+  width: 100%;
+  position: relative;
+}
+.card .cardImg {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.card .descriptionOverlay {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  color: white;
+  background-color: rgba(116, 89, 61, 0);
+  font-size: 30px;
+  font-weight: 700;
+  z-index: 1000;
+  margin: 0;
+  white-space: pre-wrap;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+  opacity: 0;
+  border-radius: 10px;
+}
+.card .descriptionOverlay:hover {
+  background-color: rgba(116, 89, 61, 0.6);
+  opacity: 1;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.card .cardTitle {
+  display: block;
+  position: absolute;
+  bottom: 2%;
+  padding: 10px 0;
+  left: 5%;
+  right: 10%;
+  height: auto;
+  width: 80%;
+  line-height: 1.2;
+  font-size: 1.5em;
+  color: white;
+  font-weight: 700;
+  z-index: 1000;
+  margin: 0;
+}
+@media (max-width: 1024px) {
+  .card .cardTitle {
+    font-size: 11px;
+  }
+}
+@media (max-width: 767px) {
+  .card .cardImg {
+    aspect-ratio: 16/9;
+    margin-bottom: 20px;
+  }
+  .card .cardTitle {
+    font-size: 18px;
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 425px) {
+  .card {
+    height: 255px;
+    margin-bottom: 20px;
+  }
+  .card .cardImg {
+    height: 255px;
+  }
+  .card .cardTitle {
+    top: auto;
+    padding-bottom: 2%;
+  }
+}

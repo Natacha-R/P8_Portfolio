@@ -1,0 +1,78 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+// Diaporama page "Logements"
+
+.slideshow {
+  position: relative;
+  height: 415px;
+  width: 60%;
+
+  .slideshow-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+
+  .prev,
+  .next {
+    background-color: rgba($color: $secondary-color, $alpha: 0.6);
+    position: absolute;
+    top: 90%;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 25px;
+    width: 30px;
+    height: 30px;
+    line-height: 40px;
+
+    &.prev {
+      left: 10px;
+    }
+
+    &.next {
+      right: 10px;
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+
+    img {
+      @include respond-to(mobile) {
+        width: 12px;
+        height: 20px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .slideshow-counter {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $secondary-color;
+    font-weight: 500;
+    padding: 5px 10px;
+  }
+
+  @include respond-to(mobile) {
+    height: 255px;
+
+    .prev,
+    .next {
+      top: 115px;
+      width: 24px;
+      height: 24px;
+    }
+
+    .slideshow-counter {
+      display: none;
+    }
+  }
+}

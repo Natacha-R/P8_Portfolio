@@ -1,0 +1,78 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+// Collapses pages "A Propos" & "logements"
+
+.collapse {
+  margin-top: $margin-auto;
+}
+
+.collapse-container {
+  gap: 20px;
+  margin: $margin-md 100px;
+  margin-bottom: $margin-md;
+  border-radius: 5px;
+  overflow: hidden;
+
+  @include respond-to(tablet) {
+    margin: $margin-md 0;
+  }
+}
+
+.collapse-header {
+  background-color: $primary-color;
+  border-radius: 5px;
+  padding: 8px;
+  @include flex-container(row, space-between, center);
+
+  h2 {
+    color: $secondary-color;
+    margin: 0;
+    font-size: 18px;
+
+    @include respond-to(mobile) {
+      font-size: 13px;
+    }
+  }
+}
+
+.chevron-icon {
+  color: $secondary-color;
+  cursor: pointer;
+  padding-right: 5px;
+  transition: transform 0.3s ease;
+
+  &.rotated {
+    transform: rotate(-180deg);
+  }
+}
+
+.collapse-toggle {
+  background: none;
+  border: none;
+}
+
+.collapse-content {
+  padding: 10px 15px;
+  background-color: $secondary-color;
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+    line-height: 1.6;
+
+    @include respond-to(mobile) {
+      margin: 0;
+      font-size: 12px;
+    }
+  }
+
+  p {
+    line-height: 1.6;
+
+    @include respond-to(mobile) {
+      margin: 0;
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,155 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+// Page "Logements"
+
+.accommodation-container {
+  margin-bottom: $margin-xxl !important;
+  @include flex-container(row, flex-start, stretch);
+  gap: 20px;
+
+  @include respond-to(mobile) {
+    margin-top: 0px;
+    margin-bottom: $margin-lg !important;
+    padding: 0px;
+    gap: 15px;
+  }
+}
+
+.accommodation-header {
+  @include flex-container(row, space-between, flex-start);
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 40%;
+
+  @include respond-to(tablet) {
+    @include flex-container(column);
+  }
+}
+
+.title-location {
+  flex: 1;
+}
+
+.titleAccommodation {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  @include text-style(36px);
+  color: $primary-color;
+
+  @include respond-to(mobile) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+.placeAccommodation {
+  margin-top: $margin-xs;
+  @include text-style;
+
+  @include respond-to(mobile) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.tags {
+  @include flex-container(row, flex-start, stretch);
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.tag {
+  background-color: $primary-color;
+  color: $secondary-color;
+  padding: 4px 26px;
+  border-radius: 10px;
+  @include text-style(14px, 600);
+  text-align: center;
+  width: auto;
+
+  @include respond-to(mobile) {
+    border-radius: 5px;
+    font-size: 10px;
+    line-height: 18px;
+    height: 18px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.host-rating {
+  @include flex-container(column, space-between, flex-end);
+  min-width: 175px;
+
+  @include respond-to(tablet) {
+    @include flex-container(row-reverse, space-between, flex-end);
+    width: 100%;
+  }
+}
+
+.host-info {
+  @include flex-container(row, flex-start, center);
+  gap: 10px;
+
+  @include respond-to(mobile) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 33px;
+  }
+}
+
+.host-name {
+  color: $primary-color;
+  @include text-style;
+  text-align: right;
+
+  @include respond-to(mobile) {
+    font-size: 12px;
+  }
+}
+
+.host-picture {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  @include respond-to(mobile) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.rating {
+  @include flex-container(row, flex-start, center);
+  gap: 15px;
+
+  @include respond-to(mobile) {
+    gap: 5px;
+  }
+}
+
+.accommodation-details {
+  @include flex-container(row, space-between);
+
+  > div {
+    flex: 1;
+    border-radius: 5px;
+    max-width: 100%;
+  }
+
+  @include respond-to(mobile) {
+    @include flex-container(column);
+    gap: 20px;
+  }
+}
+
+.collapse-container-no-margin {
+  margin: 0px;
+  margin-bottom: $margin-sm;
+  border-radius: 5px;
+  overflow: hidden;
+}

@@ -1,0 +1,69 @@
+[
+  {
+    "id": "c67ab8a7",
+    "title": "Booki",
+    "cover": "/images/Booki/CoverBooki.webp",
+    "pictures": ["/images/Booki/Picture1.webp", "/images/Booki/Picture2.webp"],
+    "short_description": "Page d'accueil d'une agence de voyage",
+    "description": "Votre maison loin de chez vous. Que vous veniez de l'autre bout du monde, ou juste de quelques stations de RER, vous vous sentirez chez vous dans notre appartement.",
+    "tags": ["HTML", "CSS"]
+  },
+  {
+    "id": "b9123946",
+    "title": "Sophie Bluel",
+    "cover": "/images/SophieBluel/CoverSophieB.webp",
+    "pictures": ["/images/SophieBluel/Picture1.webp"],
+    "short_description": "Site internet d'une architecte d'intérieur",
+    "description": "Profitez du charme de la vie parisienne dans un magnifique appartement. A 3 minutes à pied du Canl Saint Martin, vous serez proche des transports, mais également de nombreux commerces. L'appartement est tout équipé, et possède également un parking pour ceux qui souhaitent se déplacer en voiture.",
+    "tags": ["JavaScript", "HTML", "CSS", "API"]
+  },
+  {
+    "id": "46d188c5",
+    "title": "Nina Carducci",
+    "cover": "/images/NinaCarducci/CoverNinaC.webp",
+    "pictures": ["/images/NinaCarducci/Picture1.webp"],
+    "short_description": "Optimisation du site d'une photographe et de son référencement",
+    "description": "À seulement deux pas des Buttes Chaumont, venez découvrir Paris dans ce studio tout équipé. Entièrement équipé pour votre confort et élégamment décoré, il vous permettra de vivre comme un Parisien le temps de votre séjour.",
+    "tags": [
+      "SEO",
+      "Performances",
+      "Accessibilité",
+      "Lighthouse",
+      "Référencement Local"
+    ]
+  },
+  {
+    "id": "7af00cd6",
+    "title": "Kasa",
+    "cover": "/images/Kasa/CoverKasa.webp",
+    "pictures": ["/images/Kasa/Picture1.webp", "/images/Kasa/Picture2.webp"],
+    "short_description": "Site de location d’appartements entre particuliers",
+    "description": "Venez découvrir Paris en séjournant dans ce nid douillet au coeur du 11ème. La vue sur le parc résidentiel saura vous reposer de vos longues journées de tourisme dans la capitale française. Et pour les plus fêtards d'entre vous, la rue Jean Pierre Timbaud vous permettra de découvrir la night-life parisienne à seulement 5 minutes de l'appartement.",
+    "tags": ["REACT", "HTML", "SASS", "JavaScript"]
+  },
+  {
+    "id": "0979876d",
+    "title": "Mon Vieux Grimoire",
+    "cover": "/images/Grimoire/CoverGrimoire.webp",
+    "pictures": [
+      "/images/Grimoire/Picture1.webp",
+      "/images/Grimoire/Picture2.webp",
+      "/images/Grimoire/Picture3.webp"
+    ],
+    "short_description": "Site de notation de livres",
+    "description": "Ce loft entièrement rénové, et équipé de meubles de luxe saura vous séduire. Idéalement situé dans le 10ème arrondissement, vous déplacer dans Paris sera un véritable jeu d'enfant.",
+    "tags": ["Node.js", "Express", "MongoDB", "API"]
+  },
+  {
+    "id": "f72a452f",
+    "title": "Menu-Maker By Qwenta",
+    "cover": "/images/MenuMaker/CoverMenuM.webp",
+    "pictures": [
+      "/images/MenuMaker/Picture1.webp",
+      "/images/MenuMaker/Picture2.webp"
+    ],
+    "short_description": "Application de gestion et de personnalisation de menus",
+    "description": "Venez vous imprégner de la culture parisienne dans cet ancien studio d'artiste décoré avec goût, au coeur de Montmartre.",
+    "tags": ["Agile/SCRUM", "NOTION", "feedly"]
+  }
+]

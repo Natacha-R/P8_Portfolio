@@ -1,0 +1,60 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+// Page "Erreur"
+
+.error {
+  text-align: center;
+
+  img {
+    width: 50%;
+    margin: $margin-auto;
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+
+  p {
+    @include text-style(36px);
+    color: $primary-color;
+  }
+
+  a {
+    display: block;
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+
+  @include respond-to(mobile) {
+    img {
+      width: 198px;
+      margin: $margin-auto;
+      margin-top: 100px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 26px;
+      height: 52px;
+      width: 260px;
+      margin: $margin-auto;
+      margin-top: 100px;
+    }
+
+    a {
+      margin: $margin-auto;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+  }
+}
+
+.error-nav {
+  color: $text-color;
+  @include text-style;
+
+  @include respond-to(mobile) {
+    font-size: 14px;
+    height: 20px;
+    width: 221px;
+  }
+}

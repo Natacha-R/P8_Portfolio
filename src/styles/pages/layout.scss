@@ -1,0 +1,24 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+// Mise en page générale
+
+body {
+  font-family: montserrat;
+  background-color: $background-color;
+  margin: 0;
+}
+
+.home,
+.container,
+.error,
+.accommodation-container {
+  width: 90%;
+  margin: $margin-auto;
+  margin-top: $margin-md;
+  min-height: 600px;
+
+  @include respond-to(mobile) {
+    min-height: 0px;
+  }
+}

@@ -1,0 +1,96 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+// Carte logement page "Accueil"
+
+.card {
+  width: 100%;
+  position: relative;
+
+  .cardImg {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .descriptionOverlay {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    color: white;
+    background-color: rgba($color: #74593d, $alpha: 0);
+    @include text-style(30px, 700);
+    z-index: 1000;
+    margin: 0;
+    white-space: pre-wrap;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box; /* Opera/IE 8+ */
+    opacity: 0;
+    border-radius: 10px;
+  }
+
+  .descriptionOverlay:hover {
+    background-color: rgba($color: #74593d, $alpha: 0.6);
+    opacity: 1;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+
+  .cardTitle {
+    display: block;
+    position: absolute;
+    bottom: 2%;
+    padding: 10px 0;
+    left: 5%;
+    right: 10%;
+    height: auto;
+    width: 80%;
+    line-height: 1.2;
+    font-size: 1.5em;
+    color: white;
+    font-weight: 700;
+    z-index: 1000;
+    margin: 0;
+  }
+
+  @include respond-to(desktop) {
+    .cardTitle {
+      font-size: 11px;
+    }
+  }
+
+  @include respond-to(tablet) {
+    .cardImg {
+      aspect-ratio: 16/9;
+      margin-bottom: $margin-md;
+    }
+
+    .cardTitle {
+      font-size: 18px;
+      padding-bottom: $margin-lg;
+    }
+  }
+
+  @include respond-to(mobile) {
+    height: 255px;
+    margin-bottom: $margin-md;
+
+    .cardImg {
+      height: 255px;
+    }
+
+    .cardTitle {
+      top: auto;
+      padding-bottom: 2%;
+    }
+  }
+}

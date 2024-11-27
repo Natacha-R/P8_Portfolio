@@ -1,0 +1,53 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+// Haut de page (intégralité du site)
+
+.header {
+  @include flex-container(row, space-between, center);
+  height: 68px;
+  width: 90%;
+  margin: $margin-auto;
+  margin-top: 3%;
+
+  .navigation {
+    @include flex-container(row, flex-end);
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style-type: none;
+      @include flex-container;
+    }
+
+    li {
+      display: inline-block;
+      margin-left: $margin-lg;
+      @include text-style(20px);
+
+      @include respond-to(tablet) {
+        font-size: 15px;
+      }
+
+      @include respond-to(mobile) {
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-left: 0px;
+        width: 100%;
+      }
+    }
+  }
+
+  .nav-active li {
+    text-decoration: underline;
+  }
+
+  @include respond-to(mobile) {
+    a:first-child {
+      margin-right: $margin-md;
+    }
+  }
+}

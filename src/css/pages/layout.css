@@ -1,0 +1,23 @@
+body {
+  font-family: montserrat;
+  background-color: #f4d9c1;
+  margin: 0;
+}
+
+.home,
+.container,
+.error,
+.accommodation-container {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  min-height: 600px;
+}
+@media (max-width: 425px) {
+  .home,
+  .container,
+  .error,
+  .accommodation-container {
+    min-height: 0px;
+  }
+}
