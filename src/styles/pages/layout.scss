@@ -22,3 +22,19 @@ body {
     min-height: 0px;
   }
 }
+
+// Curseur personnalisé
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: $text-color;
+  border-radius: 50%; /* Cercle parfait */
+  pointer-events: none; /* Permet les clics sur les éléments sous le curseur */
+  z-index: 9999; /* Toujours au-dessus des autres éléments */
+  transform: translate(-50%, -50%); /* Centrer sur la souris */
+  transition: transform 0.1s ease, background-color 0.3s ease; /* Animations fluides */
+  cursor: none;
+}

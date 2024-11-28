@@ -9,24 +9,26 @@
   width: 60%;
 
   .slideshow-image {
+    object-fit: cover;
     height: 100%;
     width: 100%;
-    object-fit: cover;
-    border-radius: 25px;
+    border-radius: 10px;
   }
 
   .prev,
   .next {
-    background-color: rgba($color: $secondary-color, $alpha: 0.6);
+    display: flex; /* Active Flexbox */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    background-color: rgba($secondary-color, 0.7);
     position: absolute;
     top: 90%;
     border: none;
-    cursor: pointer;
+    cursor: none;
     z-index: 1;
-    border-radius: 25px;
+    border-radius: 50%; /* Cercle parfait */
     width: 30px;
     height: 30px;
-    line-height: 40px;
 
     &.prev {
       left: 10px;
@@ -37,9 +39,9 @@
     }
 
     img {
-      width: 20px;
+      width: 10px;
       height: 20px;
-      object-fit: contain;
+      object-fit: cover;
     }
 
     img {
@@ -53,7 +55,6 @@
 
   .slideshow-counter {
     position: absolute;
-    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
     color: $secondary-color;
@@ -71,8 +72,46 @@
       height: 24px;
     }
 
+    img {
+      width: 12px;
+      height: 20px;
+    }
+
     .slideshow-counter {
       display: none;
     }
+  }
+}
+
+// Styles pour la modale
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent sombre */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  &:hover {
+    cursor: none; /* Effet de fermeture en cliquant sur le fond */
+  }
+
+  .modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: hidden; /* Évite le dépassement du contenu */
+  }
+
+  .modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    cursor: none; /* Permet de fermer l'image en cliquant dessus */
   }
 }

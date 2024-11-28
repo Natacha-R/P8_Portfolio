@@ -9,6 +9,7 @@
   width: 90%;
   margin: $margin-auto;
   margin-top: 3%;
+  cursor: none;
 
   .navigation {
     @include flex-container(row, flex-end);
@@ -16,6 +17,7 @@
     a {
       color: $primary-color;
       text-decoration: none;
+      cursor: none;
     }
 
     ul {

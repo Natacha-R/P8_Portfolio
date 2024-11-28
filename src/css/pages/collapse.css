@@ -16,7 +16,7 @@
 }
 
 .collapse-header {
-  background-color: #74412b;
+  background-color: #c4a4b4;
   border-radius: 5px;
   padding: 8px;
   display: flex;
@@ -25,7 +25,7 @@
   align-items: center;
 }
 .collapse-header h2 {
-  color: #d7b095;
+  color: white;
   margin: 0;
   font-size: 18px;
 }
@@ -36,8 +36,7 @@
 }
 
 .chevron-icon {
-  color: #d7b095;
-  cursor: pointer;
+  color: white;
   padding-right: 5px;
   transition: transform 0.3s ease;
 }
@@ -52,7 +51,7 @@
 
 .collapse-content {
   padding: 10px 15px;
-  background-color: #d7b095;
+  background-color: #e1d3bd;
 }
 .collapse-content ul {
   padding-left: 0;
@@ -66,6 +65,7 @@
   }
 }
 .collapse-content p {
+  color: #74412b;
   line-height: 1.6;
 }
 @media (max-width: 425px) {

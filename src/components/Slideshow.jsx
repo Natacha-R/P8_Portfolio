@@ -8,6 +8,7 @@ import imageFlecheG from "../assets/flecheL.png";
 const Slideshow = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0); // currentIndex : variable d'état qui garde la trace de l'index de l'image actuellement affichée.
   // setCurrentIndex : fonction permet de mettre à jour l'index actuel de l'image // useState(0) : L'état initial est 0, donc la première image du tableau sera affichée par défaut.
+  const [isModalOpen, setIsModalOpen] = useState(false); // État pour gérer l'ouverture de la modale
 
   //*********** Aller à l'image suivante
   const nextSlide = () => {
@@ -23,6 +24,10 @@ const Slideshow = ({ images }) => {
     ); // Si l'index actuel est 0 (la première image), on passe à la dernière image du tableau. Sinon, on diminue l'index de 1 pour revenir à l'image précédente.
   };
 
+  // Gérer l'ouverture/fermeture de la modale
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   //*********** Si le nombre d'images est 1, on n'affiche ni les flèches ni la numérotation
   const isSingleImage = images.length === 1;
 
@@ -33,6 +38,7 @@ const Slideshow = ({ images }) => {
         src={images[currentIndex]} // l'image à afficher est déterminée dynamiquement à partir du tableau images.
         alt={`Slide ${currentIndex + 1}`} // Texte alternatif qui affiche le numéro de la slide (pour l'accessibilité).
         className="slideshow-image"
+        onClick={openModal} // Ouvrir la modale lorsqu'on clique sur l'image
       />
 
       {/* Affichage des flèches seulement si plusieurs images */}
@@ -54,8 +60,21 @@ const Slideshow = ({ images }) => {
           {currentIndex + 1}/{images.length}
         </div> // on ajoute 1 à l'index, car les index commencent à 0 / nombre total d'images dns le diaporama.
       )}
+
+      {/* Modale pour afficher l'image en grand */}
+      {isModalOpen && (
+        <div className="modal" onClick={closeModal}>
+          <div className="modal-content">
+            <img
+              src={images[currentIndex]}
+              alt={`Slide ${currentIndex + 1}`}
+              className="modal-image"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
-export default Slideshow; // composant Header est exporté par défaut (permet à d'autres fichiers de l'importer et de l'utiliser).
+export default Slideshow;

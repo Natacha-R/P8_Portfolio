@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container {
   margin-bottom: 60px !important;
 }
@@ -78,8 +79,8 @@
 }
 
 .tag {
-  background-color: #74412b;
-  color: #d7b095;
+  background-color: #c4a4b4;
+  color: white;
   padding: 4px 26px;
   border-radius: 10px;
   font-size: 14px;
@@ -259,6 +260,7 @@
   width: 90%;
   margin: auto;
   margin-top: 3%;
+  cursor: none;
 }
 .header .navigation {
   display: flex;
@@ -269,6 +271,7 @@
 .header .navigation a {
   color: #74412b;
   text-decoration: none;
+  cursor: none;
 }
 .header .navigation ul {
   list-style-type: none;
@@ -408,7 +411,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 100%;
+  height: 99%;
   width: 100%;
   color: white;
   background-color: rgba(116, 89, 61, 0);
@@ -425,6 +428,8 @@
   box-sizing: border-box; /* Opera/IE 8+ */
   opacity: 0;
   border-radius: 10px;
+  margin-block-end: 0em;
+  cursor: none;
 }
 .card .descriptionOverlay:hover {
   background-color: rgba(116, 89, 61, 0.6);
@@ -478,8 +483,8 @@
 
 .AccommodationList {
   padding: 50px;
-  background-color: #d7b095;
-  border-radius: 25px;
+  background-color: #c4a4b4;
+  border-radius: 80px;
   display: grid;
   grid-template-columns: repeat(auto-fill, 30%);
   grid-gap: 50px;
@@ -529,6 +534,21 @@ body {
   }
 }
 
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%; /* Cercle parfait */
+  pointer-events: none; /* Permet les clics sur les éléments sous le curseur */
+  z-index: 9999; /* Toujours au-dessus des autres éléments */
+  transform: translate(-50%, -50%); /* Centrer sur la souris */
+  transition: transform 0.1s ease, background-color 0.3s ease; /* Animations fluides */
+  cursor: none;
+}
+
 .collapse {
   margin-top: auto;
 }
@@ -547,7 +567,7 @@ body {
 }
 
 .collapse-header {
-  background-color: #74412b;
+  background-color: #c4a4b4;
   border-radius: 5px;
   padding: 8px;
   display: flex;
@@ -556,7 +576,7 @@ body {
   align-items: center;
 }
 .collapse-header h2 {
-  color: #d7b095;
+  color: white;
   margin: 0;
   font-size: 18px;
 }
@@ -567,8 +587,7 @@ body {
 }
 
 .chevron-icon {
-  color: #d7b095;
-  cursor: pointer;
+  color: white;
   padding-right: 5px;
   transition: transform 0.3s ease;
 }
@@ -583,7 +602,7 @@ body {
 
 .collapse-content {
   padding: 10px 15px;
-  background-color: #d7b095;
+  background-color: #e1d3bd;
 }
 .collapse-content ul {
   padding-left: 0;
@@ -597,6 +616,7 @@ body {
   }
 }
 .collapse-content p {
+  color: #74412b;
   line-height: 1.6;
 }
 @media (max-width: 425px) {
@@ -612,23 +632,25 @@ body {
   width: 60%;
 }
 .slideshow .slideshow-image {
+  object-fit: cover;
   height: 100%;
   width: 100%;
-  object-fit: cover;
-  border-radius: 25px;
+  border-radius: 10px;
 }
 .slideshow .prev,
 .slideshow .next {
-  background-color: rgba(215, 176, 149, 0.6);
+  display: flex; /* Active Flexbox */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  background-color: rgba(196, 164, 180, 0.7);
   position: absolute;
   top: 90%;
   border: none;
-  cursor: pointer;
+  cursor: none;
   z-index: 1;
-  border-radius: 25px;
+  border-radius: 50%; /* Cercle parfait */
   width: 30px;
   height: 30px;
-  line-height: 40px;
 }
 .slideshow .prev.prev,
 .slideshow .next.prev {
@@ -640,9 +662,9 @@ body {
 }
 .slideshow .prev img,
 .slideshow .next img {
-  width: 20px;
+  width: 10px;
   height: 20px;
-  object-fit: contain;
+  object-fit: cover;
 }
 @media (max-width: 425px) {
   .slideshow .prev img,
@@ -654,10 +676,9 @@ body {
 }
 .slideshow .slideshow-counter {
   position: absolute;
-  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
-  color: #d7b095;
+  color: #c4a4b4;
   font-weight: 500;
   padding: 5px 10px;
 }
@@ -671,7 +692,40 @@ body {
     width: 24px;
     height: 24px;
   }
+  .slideshow img {
+    width: 12px;
+    height: 20px;
+  }
   .slideshow .slideshow-counter {
     display: none;
   }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent sombre */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal:hover {
+  cursor: none; /* Effet de fermeture en cliquant sur le fond */
+}
+.modal .modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: hidden; /* Évite le dépassement du contenu */
+}
+.modal .modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  cursor: none; /* Permet de fermer l'image en cliquant dessus */
 }

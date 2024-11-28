@@ -1,26 +1,29 @@
+@charset "UTF-8";
 .slideshow {
   position: relative;
   height: 415px;
   width: 60%;
 }
 .slideshow .slideshow-image {
+  object-fit: cover;
   height: 100%;
   width: 100%;
-  object-fit: cover;
-  border-radius: 25px;
+  border-radius: 10px;
 }
 .slideshow .prev,
 .slideshow .next {
-  background-color: rgba(215, 176, 149, 0.6);
+  display: flex; /* Active Flexbox */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  background-color: rgba(196, 164, 180, 0.7);
   position: absolute;
   top: 90%;
   border: none;
-  cursor: pointer;
+  cursor: none;
   z-index: 1;
-  border-radius: 25px;
+  border-radius: 50%; /* Cercle parfait */
   width: 30px;
   height: 30px;
-  line-height: 40px;
 }
 .slideshow .prev.prev,
 .slideshow .next.prev {
@@ -32,9 +35,9 @@
 }
 .slideshow .prev img,
 .slideshow .next img {
-  width: 20px;
+  width: 10px;
   height: 20px;
-  object-fit: contain;
+  object-fit: cover;
 }
 @media (max-width: 425px) {
   .slideshow .prev img,
@@ -46,10 +49,9 @@
 }
 .slideshow .slideshow-counter {
   position: absolute;
-  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
-  color: #d7b095;
+  color: #c4a4b4;
   font-weight: 500;
   padding: 5px 10px;
 }
@@ -63,7 +65,40 @@
     width: 24px;
     height: 24px;
   }
+  .slideshow img {
+    width: 12px;
+    height: 20px;
+  }
   .slideshow .slideshow-counter {
     display: none;
   }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent sombre */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal:hover {
+  cursor: none; /* Effet de fermeture en cliquant sur le fond */
+}
+.modal .modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: hidden; /* Évite le dépassement du contenu */
+}
+.modal .modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  cursor: none; /* Permet de fermer l'image en cliquant dessus */
 }
