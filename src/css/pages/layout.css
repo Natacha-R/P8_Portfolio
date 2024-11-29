@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
-  font-family: montserrat;
-  background-color: #f4d9c1;
+  font-family: cursive;
+  background-color: #fdfaff;
   margin: 0;
 }
 
@@ -9,10 +9,11 @@ body {
 .container,
 .error,
 .accommodation-container {
-  width: 90%;
-  margin: auto;
-  margin-top: 20px;
-  min-height: 600px;
+  margin: 0 auto; /* Centrage horizontal */
+  min-height: 600px; /* Hauteur minimale */
+  display: flex; /* Utilisation de Flexbox */
+  flex-direction: column; /* Orientation verticale */
+  justify-content: center; /* Centrage vertical */
 }
 @media (max-width: 425px) {
   .home,
@@ -29,7 +30,7 @@ body {
   left: 0;
   width: 20px;
   height: 20px;
-  background-color: white;
+  background-color: #74412b;
   border-radius: 50%; /* Cercle parfait */
   pointer-events: none; /* Permet les clics sur les éléments sous le curseur */
   z-index: 9999; /* Toujours au-dessus des autres éléments */

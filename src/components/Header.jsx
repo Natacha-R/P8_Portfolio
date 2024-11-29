@@ -9,29 +9,51 @@ import SmallLogo from "../assets/logo_mobile.png";
 function Header() {
   return (
     <div className="header">
-      <div className="logo">
-        <picture>
-          {/* Source pour les petits écrans */}
-          <source media="(max-width: 700px)" srcSet={SmallLogo} />
-          {/* Source pour les grands écrans */}
-          <source media="(min-width: 700px)" srcSet={Logo} />
-          {/* Image par défaut (sera remplacée par le sourceSet si condition est remplie) */}
-          <img src={Logo} alt="logo kasa" />
-        </picture>
-      </div>
       <div className="navigation">
-        <ul>
+        {/* Conteneur pour le menu de navigation central */}
+        <ul className="nav-buttons">
+          {/* Liste contenant les liens de navigation stylisés comme des boutons */}
+
           <NavLink
             to="/"
-            className={({ isActive }) => (isActive ? "nav-active" : "nav")} // Si isActive est true, la classe nav-active est appliquée pour styliser le lien actif. Sinon, la classe nav est appliquée
+            className={({ isActive }) =>
+              isActive ? "nav-button active" : "nav-button"
+            }
+            // Si le lien est actif, applique la classe "active" en plus de "nav-button".
           >
             <li>Accueil</li>
+            {/* Bouton pour la page d'accueil */}
           </NavLink>
+
           <NavLink
             to="/about"
-            className={({ isActive }) => (isActive ? "nav-active" : "nav")}
+            className={({ isActive }) =>
+              isActive ? "nav-button active" : "nav-button"
+            }
+            // Même logique pour appliquer la classe "active" au lien actif.
           >
             <li>A Propos</li>
+            {/* Bouton pour la page À Propos */}
+          </NavLink>
+
+          <NavLink
+            to="/services"
+            className={({ isActive }) =>
+              isActive ? "nav-button active" : "nav-button"
+            }
+          >
+            <li>Skills</li>
+            {/* Bouton pour la page Services */}
+          </NavLink>
+
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              isActive ? "nav-button active" : "nav-button"
+            }
+          >
+            <li>Contact</li>
+            {/* Bouton pour la page Contact */}
           </NavLink>
         </ul>
       </div>
@@ -39,4 +61,5 @@ function Header() {
   );
 }
 
-export default Header; // composant Header est exporté par défaut (permet à d'autres fichiers de l'importer et de l'utiliser).
+// Exportation du composant Header pour qu'il puisse être utilisé dans d'autres fichiers
+export default Header;

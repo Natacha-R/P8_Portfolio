@@ -1,0 +1,144 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.home {
+  // Section d'introduction (haut de la page)
+  .intro-section {
+    top: 51px;
+    height: 50vh; // Hauteur de 100% de la vue, pour occuper toute la page
+    display: flex; // Flexbox pour centrer les éléments
+    justify-content: center; // Centrer horizontalement
+    align-items: center; // Centrer verticalement
+    background: linear-gradient(
+      135deg,
+      $primary-color,
+      $secondary-color
+    ); // Dégradé moderne
+    color: white; // Texte en blanc pour un contraste optimal
+    position: relative; // Positionnement relatif pour gérer les éléments internes
+    overflow: hidden; // Pour ne pas dépasser
+
+    // Bulles animées
+    .bubble {
+      position: absolute;
+      border-radius: 50%; // Forme ronde
+      background: rgba(255, 255, 255, 0.2); // Bulles translucides
+      pointer-events: none; // Empêche les interactions
+      animation: float 10s infinite ease-in-out; // Animation continue
+      mix-blend-mode: overlay; // Effet visuel subtil
+
+      // Styles pour varier les tailles et emplacements initiaux
+      &:nth-child(1) {
+        width: 60px;
+        height: 60px;
+        top: 20%;
+        left: 15%;
+        animation-duration: 12s;
+        animation-delay: 1s;
+      }
+      &:nth-child(2) {
+        width: 80px;
+        height: 80px;
+        top: 50%;
+        left: 30%;
+        animation-duration: 14s;
+        animation-delay: 2s;
+      }
+      &:nth-child(3) {
+        width: 50px;
+        height: 50px;
+        top: 30%;
+        right: 20%;
+        animation-duration: 10s;
+        animation-delay: 0s;
+      }
+      &:nth-child(4) {
+        width: 100px;
+        height: 100px;
+        bottom: 10%;
+        right: 15%;
+        animation-duration: 18s;
+        animation-delay: 3s;
+      }
+      &:nth-child(5) {
+        width: 70px;
+        height: 70px;
+        bottom: 20%;
+        left: 5%;
+        animation-duration: 16s;
+        animation-delay: 4s;
+      }
+    }
+
+    .intro-content {
+      max-width: 800px; // Largeur maximale du contenu
+      padding: 20px; // Espacement interne
+
+      h1 {
+        font-size: 3rem; // Taille réduite pour le titre principal
+        font-weight: bold; // Texte en gras
+        margin: 0; // Supprimer l'espacement en bas
+
+        span {
+          color: white; // Couleur blanche pour "Natacha"
+        }
+      }
+
+      // Texte "Développeuse Web" positionné sous "Natacha"
+      .developer-title {
+        font-size: 2.5rem; // Taille plus petite que "Natacha"
+        font-weight: 500; // Poids moyen
+        color: $secondary-color; // Couleur d'accentuation
+        margin: 10px 0 20px; // Espacement avec les autres éléments
+        animation: fade-in 2s ease-in-out; // Effet d'apparition léger
+      }
+
+      p {
+        font-size: 30px; // Taille normale pour le texte descriptif
+        margin-top: 10px; // Espacement avec "Développeuse Web"
+        line-height: 1.6; // Espacement entre les lignes
+      }
+    }
+  }
+
+  // Section des projets
+  .projects-section {
+    margin: 40px auto; // Espacement supérieur pour séparer de la section d'intro
+    padding: 20px; // Espacement interne
+    max-width: 1200px; // Largeur maximale
+  }
+
+  // Animation pour les bulles
+  @keyframes float {
+    0% {
+      transform: translate(0, 0) scale(1); // Position de départ
+      opacity: 0.8;
+    }
+    25% {
+      transform: translate(-20px, -30px) scale(1.1); // Se déplace légèrement
+    }
+    50% {
+      transform: translate(20px, -10px) scale(1.2); // Flotte vers une nouvelle position
+      opacity: 0.6;
+    }
+    75% {
+      transform: translate(-10px, 30px) scale(1.1); // Reflue
+    }
+    100% {
+      transform: translate(0, 0) scale(1); // Retour à la position initiale
+      opacity: 0.8;
+    }
+  }
+
+  // Animation d'apparition légère pour "Développeuse Web"
+  @keyframes fade-in {
+    0% {
+      opacity: 0; // Invisible
+      transform: translateY(10px); // Légère translation vers le bas
+    }
+    100% {
+      opacity: 1; // Visible
+      transform: translateY(0); // Position normale
+    }
+  }
+}

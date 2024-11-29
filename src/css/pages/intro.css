@@ -1,0 +1,118 @@
+.home .intro-section {
+  top: 51px;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #74412b, #c4a4b4);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.home .intro-section .bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+  animation: float 10s infinite ease-in-out;
+  mix-blend-mode: overlay;
+}
+.home .intro-section .bubble:nth-child(1) {
+  width: 60px;
+  height: 60px;
+  top: 20%;
+  left: 15%;
+  animation-duration: 12s;
+  animation-delay: 1s;
+}
+.home .intro-section .bubble:nth-child(2) {
+  width: 80px;
+  height: 80px;
+  top: 50%;
+  left: 30%;
+  animation-duration: 14s;
+  animation-delay: 2s;
+}
+.home .intro-section .bubble:nth-child(3) {
+  width: 50px;
+  height: 50px;
+  top: 30%;
+  right: 20%;
+  animation-duration: 10s;
+  animation-delay: 0s;
+}
+.home .intro-section .bubble:nth-child(4) {
+  width: 100px;
+  height: 100px;
+  bottom: 10%;
+  right: 15%;
+  animation-duration: 18s;
+  animation-delay: 3s;
+}
+.home .intro-section .bubble:nth-child(5) {
+  width: 70px;
+  height: 70px;
+  bottom: 20%;
+  left: 5%;
+  animation-duration: 16s;
+  animation-delay: 4s;
+}
+.home .intro-section .intro-content {
+  max-width: 800px;
+  padding: 20px;
+}
+.home .intro-section .intro-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+}
+.home .intro-section .intro-content h1 span {
+  color: white;
+}
+.home .intro-section .intro-content .developer-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #c4a4b4;
+  margin: 10px 0 20px;
+  animation: fade-in 2s ease-in-out;
+}
+.home .intro-section .intro-content p {
+  font-size: 30px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+.home .projects-section {
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 1200px;
+}
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translate(-20px, -30px) scale(1.1);
+  }
+  50% {
+    transform: translate(20px, -10px) scale(1.2);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translate(-10px, 30px) scale(1.1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,7 +1,7 @@
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 68px;
   width: 90%;
@@ -12,45 +12,49 @@
 .header .navigation {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: stretch;
 }
 .header .navigation a {
-  color: #74412b;
-  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
   cursor: none;
+  background-color: #c4a4b4;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  margin: 0 20px;
+  text-decoration: none;
+}
+.header .navigation a:hover {
+  background-color: #d8c3ce;
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+.header .navigation a:active {
+  transform: translateY(2px);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 .header .navigation ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: stretch;
 }
 .header .navigation li {
-  display: inline-block;
-  margin-left: 30px;
-  font-size: 20px;
-  font-weight: 500;
-}
-@media (max-width: 767px) {
-  .header .navigation li {
-    font-size: 15px;
-  }
+  margin: 0 10px;
 }
 @media (max-width: 425px) {
-  .header .navigation li {
-    font-size: 12px;
-    text-transform: uppercase;
-    margin-left: 0px;
+  .header .navigation {
+    flex-direction: column;
+  }
+  .header .navigation a {
     width: 100%;
-  }
-}
-.header .nav-active li {
-  text-decoration: underline;
-}
-@media (max-width: 425px) {
-  .header a:first-child {
-    margin-right: 20px;
+    margin: 5px 0;
+    text-align: center;
   }
 }
