@@ -25,7 +25,7 @@ function Home() {
       </section>
 
       {/* Liste des projets via le composant Cards */}
-      <section className="projects-section">
+      <section id="projects" className="projects-section">
         <h2 className="projects-title">Mes Projets</h2>
         <Cards />
       </section>

@@ -1,28 +1,61 @@
-import React from "react"; // // importe React depuis la bibliothèque "react", (permet d'utiliser les fonctionnalités de React dans le fichier)
-import { NavLink } from "react-router-dom"; // Importation du composant NavLink depuis react-router-dom (liens de navigation).
+// Importation de React et des composants nécessaires depuis la bibliothèque "react-router-dom" pour la navigation
+import React from "react";
+import { NavLink, useNavigate } from "react-router-dom"; // NavLink pour la navigation entre les pages et useNavigate pour naviguer dynamiquement
 
+// Importation des logos pour l'affichage dans l'en-tête
 import Logo from "../assets/logo.png";
 import SmallLogo from "../assets/logo_mobile.png";
 
-// composant Header "intégralité du site" pour l'en-tête des pages (Logo & menu de navigation) :
-
+// Composant Header, qui représente l'en-tête global du site avec le menu de navigation
 function Header() {
+  // Utilisation du hook useNavigate pour permettre une navigation programmatique dans l'application
+  const navigate = useNavigate();
+
+  // Fonction qui gère le clic sur le bouton "Projets" et défile automatiquement jusqu'à la section des projets
+  const handleProjectsClick = (e) => {
+    e.preventDefault(); // Empêche le comportement par défaut du lien <a> (qui serait de recharger la page)
+
+    // Si l'utilisateur n'est pas sur la page d'accueil ("/"), on navigue d'abord vers la page d'accueil
+    if (window.location.pathname !== "/") {
+      navigate("/"); // Navigue vers la page d'accueil
+
+      // Après un court délai (100 ms), on fait défiler la page jusqu'à la section des projets
+      setTimeout(() => {
+        const projectsSection = document.getElementById("projects"); // Recherche la section ayant l'ID "projects"
+        if (projectsSection) {
+          // Si la section des projets existe
+          // Défile jusqu'à cette section avec un mouvement doux
+          projectsSection.scrollIntoView({
+            behavior: "smooth", // Défilement doux
+            block: "start", // Positionner la section en haut de la fenêtre de visualisation
+          });
+        }
+      }, 100); // Le délai de 100ms est ajouté pour permettre à la page de se charger complètement avant le défilement
+    } else {
+      // Si l'utilisateur est déjà sur la page d'accueil, on défile directement jusqu'à la section des projets
+      const projectsSection = document.getElementById("projects");
+      if (projectsSection) {
+        // Si la section des projets existe
+        projectsSection.scrollIntoView({
+          behavior: "smooth", // Défilement doux
+          block: "start", // Positionner la section en haut de la fenêtre de visualisation
+        });
+      }
+    }
+  };
+
   return (
     <div className="header">
       <div className="navigation">
         {/* Conteneur pour le menu de navigation central */}
         <ul className="nav-buttons">
-          {/* Liste contenant les liens de navigation stylisés comme des boutons */}
-
           <NavLink
             to="/"
             className={({ isActive }) =>
               isActive ? "nav-button active" : "nav-button"
             }
-            // Si le lien est actif, applique la classe "active" en plus de "nav-button".
           >
             <li>Accueil</li>
-            {/* Bouton pour la page d'accueil */}
           </NavLink>
 
           <NavLink
@@ -30,11 +63,18 @@ function Header() {
             className={({ isActive }) =>
               isActive ? "nav-button active" : "nav-button"
             }
-            // Même logique pour appliquer la classe "active" au lien actif.
           >
             <li>A Propos</li>
-            {/* Bouton pour la page À Propos */}
           </NavLink>
+
+          {/* Lien de navigation qui défile vers la section des projets */}
+          <a
+            href="#projects"
+            onClick={handleProjectsClick}
+            className="nav-button" // Ajout de la classe "nav-button" pour un style cohérent
+          >
+            <li>Projets</li>
+          </a>
 
           <NavLink
             to="/skills"
@@ -43,7 +83,6 @@ function Header() {
             }
           >
             <li>Skills</li>
-            {/* Bouton pour la page Services */}
           </NavLink>
 
           <NavLink
@@ -53,7 +92,6 @@ function Header() {
             }
           >
             <li>Contact</li>
-            {/* Bouton pour la page Contact */}
           </NavLink>
         </ul>
       </div>
@@ -61,5 +99,4 @@ function Header() {
   );
 }
 
-// Exportation du composant Header pour qu'il puisse être utilisé dans d'autres fichiers
 export default Header;

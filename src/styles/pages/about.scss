@@ -37,15 +37,15 @@
 
 .about-text {
   flex: 2;
-  font-family: sans-serif;
 
   h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     color: $primary-color;
   }
 
   p {
-    font-size: 1rem;
+    font-family: sans-serif;
+    font-size: 20px;
     line-height: 1.6;
     color: $secondary-color;
   }

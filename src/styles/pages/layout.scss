@@ -12,6 +12,11 @@ body {
   min-height: 100vh; // S'assure que le body prend toute la hauteur de la fenêtre
 }
 
+/* Ajout d'un défilement fluide pour toute la page */
+html {
+  scroll-behavior: smooth;
+}
+
 .home,
 .container,
 .error {
