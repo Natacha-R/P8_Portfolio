@@ -46,6 +46,7 @@
   align-items: stretch;
 }
 .header .navigation li {
+  color: #74412b;
   margin: 0 10px;
 }
 @media (max-width: 425px) {

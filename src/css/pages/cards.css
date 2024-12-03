@@ -1,26 +1,24 @@
 .projects-section {
-  margin: 40px auto;
+  margin: 130px auto;
   padding: 20px;
   max-width: 1200px;
   position: relative;
 }
 
 .projects-title {
-  position: absolute;
-  margin-top: 130px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  text-align: center;
   font-size: 4rem;
   font-weight: 500;
-  color: #c4a4b4;
+  color: #74412b;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   transition: transform 0.9s ease;
 }
 .projects-title:hover {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
 }
 
 .AccommodationList {
-  margin-top: 180px;
   padding: 50px;
   background-color: #c4a4b4;
   border-radius: 80px;
