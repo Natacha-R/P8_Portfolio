@@ -20,6 +20,7 @@
 }
 
 .collapse-header {
+  font-size: 35px;
   background-color: $secondary-color;
   border-radius: 5px;
   padding: 8px;
@@ -28,7 +29,7 @@
   h2 {
     color: $text-color;
     margin: 0;
-    font-size: 18px;
+    font-size: 22px;
 
     @include respond-to(mobile) {
       font-size: 13px;
@@ -52,6 +53,8 @@
 }
 
 .collapse-content {
+  font-family: sans-serif;
+  font-size: 16px;
   padding: 10px 15px;
   background-color: #f4e5eb;
 

@@ -16,6 +16,7 @@
 }
 
 .collapse-header {
+  font-size: 35px;
   background-color: #c4a4b4;
   border-radius: 5px;
   padding: 8px;
@@ -27,7 +28,7 @@
 .collapse-header h2 {
   color: white;
   margin: 0;
-  font-size: 18px;
+  font-size: 22px;
 }
 @media (max-width: 425px) {
   .collapse-header h2 {
@@ -50,6 +51,8 @@
 }
 
 .collapse-content {
+  font-family: sans-serif;
+  font-size: 16px;
   padding: 10px 15px;
   background-color: #f4e5eb;
 }

@@ -1,23 +1,52 @@
-import React from "react"; // importe React depuis la bibliothèque "react", (permet d'utiliser les fonctionnalités de React dans le fichier)
+// Importation de React, nécessaire pour définir le composant React
+import React from "react";
 
-import LogoFooter from "../assets/footerDesktop.png";
-import LogoFooterSmall from "../assets/footerMobile.png";
+// Importation des icônes depuis la bibliothèque react-icons/fa pour inclure des icônes d'email, LinkedIn et GitHub
+import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa"; // Icônes spécifiques de React Icons
 
-// composant Footer "intégralité du site" pour afficher une image dans le bas de la page :
-
+// Définition du composant Footer
 function Footer() {
   return (
-    <div className="footer">
-      <picture>
-        {/* Source pour les petits écrans */}
-        <source media="(max-width: 500px)" srcSet={LogoFooterSmall} />
-        {/* Source pour les grands écrans */}
-        <source media="(min-width: 500px)" srcSet={LogoFooter} />
-        {/* Image par défaut (sera remplacée par le sourceSet si condition est remplie) */}
-        <img src={LogoFooter} alt="logo bas de page" />
-      </picture>
-    </div>
+    // Balise footer qui enveloppe tout le contenu du footer
+    <footer className="footer">
+      {/* Conteneur principal du footer contenant le texte et les icônes */}
+      <div className="footer-content">
+        <p>Natacha RIPPERT</p>
+
+        {/* Conteneur pour les icônes sociales (email, LinkedIn, GitHub) */}
+        <div className="footer-icons">
+          {/* Icône pour envoyer un email */}
+          <a
+            href="mailto:natacha.le.barbier@gmail.com" // Lien mailto qui permet d'ouvrir le client mail par défaut pour envoyer un email
+            aria-label="Envoyer un email" // Texte alternatif pour améliorer l'accessibilité
+          >
+            <FaEnvelope /> {/* Affichage de l'icône enveloppe (email) */}
+          </a>
+
+          {/* Icône pour LinkedIn */}
+          <a
+            href="https://www.linkedin.com/in/natacha-rippert-971b09232/" // Lien vers le profil LinkedIn
+            target="_blank" // Ouvre le lien dans un nouvel onglet
+            rel="noopener noreferrer" // Amélioration de la sécurité lors de l'ouverture du lien dans un nouvel onglet
+            aria-label="LinkedIn" // Texte alternatif pour l'accessibilité, pour les lecteurs d'écran
+          >
+            <FaLinkedin /> {/* Affichage de l'icône LinkedIn */}
+          </a>
+
+          {/* Icône pour GitHub */}
+          <a
+            href="https://github.com/Natacha-R" // Lien vers le profil GitHub
+            target="_blank" // Ouvre le lien dans un nouvel onglet
+            rel="noopener noreferrer" // Sécurité supplémentaire lors de l'ouverture dans un nouvel onglet
+            aria-label="GitHub" // Texte alternatif pour l'accessibilité
+          >
+            <FaGithub /> {/* Affichage de l'icône GitHub */}
+          </a>
+        </div>
+      </div>
+    </footer>
   );
 }
 
-export default Footer; // // composant Footer est exporté par défaut (permet à d'autres fichiers de l'importer et de l'utiliser).
+// Exportation du composant Footer pour qu'il soit utilisé ailleurs dans l'application
+export default Footer;

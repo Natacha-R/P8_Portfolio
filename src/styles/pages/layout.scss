@@ -8,18 +8,18 @@ body {
   background-color: $background-color;
   margin: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; // Organise les éléments verticalement
+  min-height: 100vh; // S'assure que le body prend toute la hauteur de la fenêtre
 }
 
 .home,
 .container,
 .error {
-  margin: 0 auto; /* Centrage horizontal */
-  min-height: 600px; /* Hauteur minimale */
-  display: flex; /* Utilisation de Flexbox */
-  flex-direction: column; /* Orientation verticale */
-  justify-content: center; /* Centrage vertical */
+  margin: 0 auto;
+  flex: 1; // Laisse la section principale occuper l'espace restant
+  display: flex;
+  flex-direction: column;
+  justify-content: center; // Centre le contenu verticalement
 
   @include respond-to(mobile) {
     min-height: 0px;
