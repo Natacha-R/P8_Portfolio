@@ -415,7 +415,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 99%;
+  height: 98%;
   width: 100%;
   color: white;
   background-color: rgba(116, 89, 61, 0);
@@ -485,8 +485,29 @@
   }
 }
 
+.projects-section {
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 1200px;
+  position: relative;
+}
+
+.projects-title {
+  position: absolute;
+  margin-top: 130px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  font-weight: 500;
+  color: #c4a4b4;
+  transition: transform 0.9s ease;
+}
+.projects-title:hover {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 .AccommodationList {
-  margin-top: 100px;
+  margin-top: 180px;
   padding: 50px;
   background-color: #c4a4b4;
   border-radius: 80px;
@@ -519,12 +540,14 @@ body {
   font-family: cursive;
   background-color: #fdfaff;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .home,
 .container,
-.error,
-.accommodation-container {
+.error {
   margin: 0 auto; /* Centrage horizontal */
   min-height: 600px; /* Hauteur minimale */
   display: flex; /* Utilisation de Flexbox */
@@ -534,7 +557,18 @@ body {
 @media (max-width: 425px) {
   .home,
   .container,
-  .error,
+  .error {
+    min-height: 0px;
+  }
+}
+
+.accommodation-container {
+  width: 90%;
+  margin: auto;
+  margin-top: 60px;
+  min-height: 600px;
+}
+@media (max-width: 425px) {
   .accommodation-container {
     min-height: 0px;
   }
@@ -608,7 +642,7 @@ body {
 
 .collapse-content {
   padding: 10px 15px;
-  background-color: #e1d3bd;
+  background-color: #f4e5eb;
 }
 .collapse-content ul {
   padding-left: 0;
@@ -739,6 +773,7 @@ body {
 .home .intro-section {
   top: 51px;
   height: 50vh;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -818,11 +853,6 @@ body {
   font-size: 30px;
   margin-top: 10px;
   line-height: 1.6;
-}
-.home .projects-section {
-  margin: 40px auto;
-  padding: 20px;
-  max-width: 1200px;
 }
 @keyframes float {
   0% {

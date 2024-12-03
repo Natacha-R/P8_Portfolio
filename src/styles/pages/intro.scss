@@ -6,6 +6,7 @@
   .intro-section {
     top: 51px;
     height: 50vh; // Hauteur de 100% de la vue, pour occuper toute la page
+    margin-top: 40px;
     display: flex; // Flexbox pour centrer les éléments
     justify-content: center; // Centrer horizontalement
     align-items: center; // Centrer verticalement
@@ -99,13 +100,6 @@
         line-height: 1.6; // Espacement entre les lignes
       }
     }
-  }
-
-  // Section des projets
-  .projects-section {
-    margin: 40px auto; // Espacement supérieur pour séparer de la section d'intro
-    padding: 20px; // Espacement interne
-    max-width: 1200px; // Largeur maximale
   }
 
   // Animation pour les bulles

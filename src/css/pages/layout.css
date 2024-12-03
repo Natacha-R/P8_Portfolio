@@ -3,12 +3,14 @@ body {
   font-family: cursive;
   background-color: #fdfaff;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .home,
 .container,
-.error,
-.accommodation-container {
+.error {
   margin: 0 auto; /* Centrage horizontal */
   min-height: 600px; /* Hauteur minimale */
   display: flex; /* Utilisation de Flexbox */
@@ -18,7 +20,18 @@ body {
 @media (max-width: 425px) {
   .home,
   .container,
-  .error,
+  .error {
+    min-height: 0px;
+  }
+}
+
+.accommodation-container {
+  width: 90%;
+  margin: auto;
+  margin-top: 60px;
+  min-height: 600px;
+}
+@media (max-width: 425px) {
   .accommodation-container {
     min-height: 0px;
   }

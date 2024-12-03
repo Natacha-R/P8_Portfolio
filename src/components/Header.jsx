@@ -37,7 +37,7 @@ function Header() {
           </NavLink>
 
           <NavLink
-            to="/services"
+            to="/skills"
             className={({ isActive }) =>
               isActive ? "nav-button active" : "nav-button"
             }

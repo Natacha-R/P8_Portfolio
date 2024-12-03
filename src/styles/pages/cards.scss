@@ -1,10 +1,33 @@
 @import "../partials/variables";
 @import "../partials/mixins";
 
-// conteneurs des cartes logements, page "Accueil"
+// conteneurs des cartes Projets, page "Accueil"
+
+// Section des projets
+.projects-section {
+  margin: 40px auto; // Espacement supérieur pour séparer de la section d'intro
+  padding: 20px; // Espacement interne
+  max-width: 1200px; // Largeur maximale
+  position: relative;
+}
+
+.projects-title {
+  position: absolute;
+  margin-top: 130px;
+  left: 50%;
+  transform: translate(-50%, -50%); // Centre exactement
+  font-size: 4rem;
+  font-weight: 500;
+  color: #c4a4b4;
+  transition: transform 0.9s ease;
+
+  &:hover {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
 
 .AccommodationList {
-  margin-top: 100px;
+  margin-top: 180px;
   padding: 50px;
   background-color: $secondary-color;
   border-radius: 80px;

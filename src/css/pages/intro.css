@@ -1,6 +1,7 @@
 .home .intro-section {
   top: 51px;
   height: 50vh;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,11 +81,6 @@
   font-size: 30px;
   margin-top: 10px;
   line-height: 1.6;
-}
-.home .projects-section {
-  margin: 40px auto;
-  padding: 20px;
-  max-width: 1200px;
 }
 @keyframes float {
   0% {

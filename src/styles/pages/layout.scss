@@ -5,19 +5,32 @@
 
 body {
   font-family: cursive;
-  background-color: #fdfaff;
+  background-color: $background-color;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .home,
 .container,
-.error,
-.accommodation-container {
+.error {
   margin: 0 auto; /* Centrage horizontal */
   min-height: 600px; /* Hauteur minimale */
   display: flex; /* Utilisation de Flexbox */
   flex-direction: column; /* Orientation verticale */
   justify-content: center; /* Centrage vertical */
+
+  @include respond-to(mobile) {
+    min-height: 0px;
+  }
+}
+
+.accommodation-container {
+  width: 90%;
+  margin: $margin-auto;
+  margin-top: 60px;
+  min-height: 600px;
 
   @include respond-to(mobile) {
     min-height: 0px;
