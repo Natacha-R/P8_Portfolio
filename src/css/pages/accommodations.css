@@ -176,6 +176,7 @@
   flex: 1;
   border-radius: 5px;
   max-width: 100%;
+  margin-bottom: 20px;
 }
 @media (max-width: 425px) {
   .accommodation-details {

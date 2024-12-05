@@ -15,7 +15,7 @@ function Accommodation() {
   } // Si aucun logement ne correspond à l’id fourni, le composant affiche la page d’erreur en utilisant le composant Error.
 
   // Déstructuration des données du logement pour simplifier leur utilisation et éviter les répétitions.
-  const { title, tags, description } = accommodation;
+  const { title, tags, description, difficulties, link } = accommodation;
 
   return (
     <div className="accommodation-container">
@@ -38,6 +38,18 @@ function Accommodation() {
               <p>{description}</p>
             </Collapse>
           </div>
+          {/****************** Difficultés rencontrées ******************/}
+          <div className="accommodation-details">
+            <Collapse
+              title="Difficultés rencontrées"
+              class="collapse-container-no-margin"
+            >
+              <p>{difficulties}</p>
+            </Collapse>
+          </div>
+          <a href={link} target="_blank">
+            Lien GitHub
+          </a>
         </div>
       </div>
 

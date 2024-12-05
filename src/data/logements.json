@@ -6,7 +6,9 @@
     "pictures": ["/images/Booki/Picture1.webp", "/images/Booki/Picture2.webp"],
     "short_description": "Page d'accueil d'une agence de voyage",
     "description": "Ce projet a marqué mes premiers pas dans l'univers du HTML et CSS. La mission consistait à développer une page web conforme à une maquette Figma tout en garantissant sa compatibilité sur mobile, tablette et desktop. Les consignes incluaient la simulation d'un bouton de recherche ainsi que l'ajout d'effets graphiques sur divers éléments pour enrichir l'expérience utilisateur.",
-    "tags": ["HTML", "CSS"]
+    "tags": ["HTML", "CSS"],
+    "difficulties": "Test de difficultés",
+    "link": "https://github.com/Natacha-R/OC-Projet-2"
   },
   {
     "id": "b9123946",
@@ -15,7 +17,9 @@
     "pictures": ["/images/SophieBluel/Picture1.webp"],
     "short_description": "Site internet d'une architecte d'intérieur",
     "description": "Dans ce projet, j'ai développé la partie Front-End d'un site pour une architecte d'intérieur. La mission consistait à créer une page dynamique présentant ses travaux, à gérer les interactions utilisateurs et à manipuler le DOM avec JavaScript. J'ai également conçu une page de connexion et une modale pour uploader des médias.",
-    "tags": ["JavaScript", "HTML", "CSS", "API"]
+    "tags": ["JavaScript", "HTML", "CSS", "API"],
+    "difficulties": "Test de difficultés",
+    "link": "https://github.com/Natacha-R/OCR_Projet-3"
   },
   {
     "id": "46d188c5",
@@ -31,7 +35,9 @@
       "Lighthouse",
       "wave",
       "Référencement Local"
-    ]
+    ],
+    "difficulties": "Test de difficultés",
+    "link": "https://github.com/Natacha-R/P4_Nina-Carducci"
   },
   {
     "id": "7af00cd6",
@@ -40,7 +46,9 @@
     "pictures": ["/images/Kasa/Picture1.webp", "/images/Kasa/Picture2.webp"],
     "short_description": "Site de location d’appartements entre particuliers",
     "description": "Dans ce projet, j'ai développé le front-end d'une application en utilisant React et React Router pour offrir une expérience utilisateur fluide et réactive. J'ai conçu des composants React modulaires pour présenter les données de manière dynamique et mis en place une navigation efficace entre les pages grâce à React Router. Le projet reposait sur des données simulées issues d'un fichier JSON et s'appuyait sur les maquettes fournies.",
-    "tags": ["REACT", "HTML", "SASS", "JavaScript", "Node.js"]
+    "tags": ["REACT", "HTML", "SASS", "JavaScript", "Node.js"],
+    "difficulties": "Test de difficultés",
+    "link": "https://github.com/Natacha-R/P5_Kasa"
   },
   {
     "id": "0979876d",
@@ -53,7 +61,9 @@
     ],
     "short_description": "Site de notation de livres",
     "description": "Dans ce projet, j'ai conçu le back-end d'un site de notation de livres en utilisant Express et MongoDB. Mon rôle a consisté à structurer le serveur, établir la communication avec la base de données et implémenter des opérations CRUD pour gérer les livres et les notations. J'ai également intégré un système d'authentification sécurisé, géré le téléchargement et l'optimisation des images, et développé des fonctionnalités permettant de noter les livres et de calculer des moyennes. En suivant une architecture MVC et en utilisant Mongoose pour modéliser les données, j'ai respecté les bonnes pratiques du Green Code afin de réduire l'empreinte écologique de l'application.",
-    "tags": ["Node.js", "Express", "Mongoose", "MongoDB", "API"]
+    "tags": ["Node.js", "Express", "Mongoose", "MongoDB", "API"],
+    "difficulties": "Test de difficultés",
+    "link": "https://github.com/Natacha-R/P6_Grimoire"
   },
   {
     "id": "f72a452f",
@@ -65,6 +75,8 @@
     ],
     "short_description": "Application de gestion et de personnalisation de menus",
     "description": "Dans ce projet, j'ai assumé le rôle de planificateur pour le développement d'un site web. Mes responsabilités incluaient la réalisation d'une veille technologique pour identifier les outils et technologies adaptés, la rédaction des spécifications techniques détaillées, et la décomposition des fonctionnalités en tâches claires et spécifiques. J'ai utilisé un outil de gestion de projet, tel que Notion, pour structurer le travail et créer un tableau Kanban afin d'assurer un suivi efficace du projet. Enfin, j'ai présenté une solution technique détaillée, offrant une vision claire et organisée du développement à venir. ",
-    "tags": ["Agile/SCRUM", "NOTION", "feedly"]
+    "tags": ["Agile/SCRUM", "NOTION", "feedly"],
+    "difficulties": "Test de difficultés",
+    "link": "https://github.com/Natacha-R/P7_Menu-Maker_Qwenta"
   }
 ]
