@@ -1,5 +1,6 @@
-import React, { useState } from "react"; // Importation de React pour créer des composants
+import React, { useState, useRef } from "react"; // Importation de React pour créer des composants
 import Cards from "../components/Cards"; // Importation du composant pour afficher les projets
+import emailjs from "@emailjs/browser"; // Importation de la librairie pour envoyer des emails
 
 // Composant Home : représente la page d'accueil du portfolio
 function Home() {
@@ -17,6 +18,8 @@ function Home() {
     email: "",
     message: "",
   });
+
+  const form = useRef();
 
   // Fonction pour gérer les changements dans les champs du formulaire
   const handleChange = (e) => {
@@ -62,7 +65,19 @@ function Home() {
     } else {
       // Si le formulaire est valide, afficher un message d'alerte ou envoyer le formulaire
       alert("Message envoyé !");
-      // Réinitialiser les données du formulaire
+      // Réinitialiser les données du formulaire plus envoi
+      emailjs
+        .sendForm("service_2m3dj4q", "template_l3pp64h", form.current, {
+          publicKey: "Z6bRs2FqVZ5iKTf6V",
+        })
+        .then(
+          () => {
+            console.log("SUCCESS!");
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
       setFormData({
         firstName: "",
         lastName: "",
@@ -102,7 +117,7 @@ function Home() {
       {/* Section Contact */}
       <section className="contact-section">
         <h2>Contactez-moi</h2>
-        <form onSubmit={handleSubmit} className="contact-form">
+        <form ref={form} onSubmit={handleSubmit} className="contact-form">
           <div className="form-group">
             <label htmlFor="firstName">Nom</label>
             <input
