@@ -1,9 +1,9 @@
-.about-page {
+.skills-page {
   padding-left: 0px;
   margin-top: 110px;
 }
 
-.about-section {
+.skill-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,7 +18,7 @@
   }
 }
 
-.about-photo {
+.skill-photo {
   flex: 1;
   max-width: 300px;
   height: 300px;
@@ -34,7 +34,7 @@
   }
 }
 
-.about-text {
+.skill-text {
   flex: 2;
 
   h2 {

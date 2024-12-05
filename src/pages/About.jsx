@@ -1,6 +1,4 @@
 import React from "react";
-import Banner from "../components/Banner";
-import BannerA from "../assets/banniereA.png";
 
 function About() {
   return (

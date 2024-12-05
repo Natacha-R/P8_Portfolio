@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Project from "./pages/Project";
+import Skills from "./pages/Skills";
 import Error from "./pages/Error";
 import Footer from "./components/Footer";
 
@@ -57,6 +58,7 @@ function App() {
         <Route path="/" element={<Home />} /> {/* Page d'accueil */}
         <Route path="/about" element={<About />} /> {/* Page "À propos" */}
         <Route path="/project/:id" element={<Project />} />{" "}
+        <Route path="/skills" element={<Skills />} /> {/* Page "À propos" */}
         {/* Page de projet */}
         <Route path="*" element={<Error />} /> {/* Page d'erreur */}
       </Routes>

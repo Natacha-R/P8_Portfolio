@@ -2,10 +2,6 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom"; // NavLink pour la navigation entre les pages et useNavigate pour naviguer dynamiquement
 
-// Importation des logos pour l'affichage dans l'en-tête
-import Logo from "../assets/logo.png";
-import SmallLogo from "../assets/logo_mobile.png";
-
 // Composant Header, qui représente l'en-tête global du site avec le menu de navigation
 function Header() {
   // Utilisation du hook useNavigate pour permettre une navigation programmatique dans l'application

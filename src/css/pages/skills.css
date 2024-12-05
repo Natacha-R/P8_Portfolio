@@ -6,7 +6,7 @@
  * 17 | |     text-align: center;
  * 18 | \   }
  *    '
- *   src/styles/pages/about.scss 14:3  root stylesheet */
+ *   src/styles/pages/skills.scss 14:3  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -16,5 +16,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 14 \2502  \250c    @include respond-to(mobile) {\a 15 \2502  \2502      flex-direction: column;\a 16 \2502  \2502      align-items: center;\a 17 \2502  \2502      text-align: center;\a 18 \2502  \2514    }\a    \2575 \a   src/styles/pages/about.scss 14:3  root stylesheet";
+  content: "Error: Undefined mixin.\a    \2577 \a 14 \2502  \250c    @include respond-to(mobile) {\a 15 \2502  \2502      flex-direction: column;\a 16 \2502  \2502      align-items: center;\a 17 \2502  \2502      text-align: center;\a 18 \2502  \2514    }\a    \2575 \a   src/styles/pages/skills.scss 14:3  root stylesheet";
 }

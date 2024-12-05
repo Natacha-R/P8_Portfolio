@@ -31,7 +31,9 @@ html {
   }
 }
 
-.project-container {
+.project-container,
+.about-page,
+.skills-page {
   width: 90%;
   margin: $margin-auto;
   margin-top: 60px;

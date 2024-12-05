@@ -30,14 +30,18 @@ html {
   }
 }
 
-.project-container {
+.project-container,
+.about-page,
+.skills-page {
   width: 90%;
   margin: auto;
   margin-top: 60px;
   min-height: 600px;
 }
 @media (max-width: 425px) {
-  .project-container {
+  .project-container,
+  .about-page,
+  .skills-page {
     min-height: 0px;
   }
 }
