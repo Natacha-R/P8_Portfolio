@@ -80,6 +80,10 @@
       font-size: 18px;
       padding-bottom: $margin-lg;
     }
+
+    .descriptionOverlay {
+      height: 92%;
+    }
   }
 
   @include respond-to(mobile) {
@@ -93,6 +97,10 @@
     .cardTitle {
       top: auto;
       padding-bottom: 2%;
+    }
+
+    .descriptionOverlay {
+      height: 255px;
     }
   }
 }

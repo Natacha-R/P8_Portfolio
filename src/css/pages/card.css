@@ -70,6 +70,9 @@
     font-size: 18px;
     padding-bottom: 30px;
   }
+  .card .descriptionOverlay {
+    height: 92%;
+  }
 }
 @media (max-width: 425px) {
   .card {
@@ -82,5 +85,8 @@
   .card .cardTitle {
     top: auto;
     padding-bottom: 2%;
+  }
+  .card .descriptionOverlay {
+    height: 255px;
   }
 }
