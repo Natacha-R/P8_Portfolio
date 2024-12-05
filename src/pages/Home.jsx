@@ -115,7 +115,7 @@ function Home() {
       </section>
 
       {/* Section Contact */}
-      <section className="contact-section">
+      <section id="contact" className="contact-section">
         <h2>Contactez-moi</h2>
         <form ref={form} onSubmit={handleSubmit} className="contact-form">
           <div className="form-group">

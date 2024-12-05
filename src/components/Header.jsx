@@ -44,6 +44,39 @@ function Header() {
     }
   };
 
+  // Fonction qui gère le clic sur le bouton "Contact" et défile automatiquement jusqu'à la section de contact
+  const handleContactClick = (e) => {
+    e.preventDefault(); // Empêche le comportement par défaut du lien <a> (qui serait de recharger la page)
+
+    // Si l'utilisateur n'est pas sur la page d'accueil ("/"), on navigue d'abord vers la page d'accueil
+    if (window.location.pathname !== "/") {
+      navigate("/"); // Navigue vers la page d'accueil
+
+      // Après un court délai (100 ms), on fait défiler la page jusqu'à la section de contact
+      setTimeout(() => {
+        const contactSection = document.getElementById("contact"); // Recherche la section ayant l'ID "contact"
+        if (contactSection) {
+          // Si la section de contact existe
+          // Défile jusqu'à cette section avec un mouvement doux
+          contactSection.scrollIntoView({
+            behavior: "smooth", // Défilement doux
+            block: "start", // Positionner la section en haut de la fenêtre de visualisation
+          });
+        }
+      }, 100); // Le délai de 100ms est ajouté pour permettre à la page de se charger complètement avant le défilement
+    } else {
+      // Si l'utilisateur est déjà sur la page d'accueil, on défile directement jusqu'à la section de contact
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        // Si la section de contact existe
+        contactSection.scrollIntoView({
+          behavior: "smooth", // Défilement doux
+          block: "start", // Positionner la section en haut de la fenêtre de visualisation
+        });
+      }
+    }
+  };
+
   return (
     <div className="header">
       <div className="navigation">
@@ -85,14 +118,14 @@ function Header() {
             <li>Skills</li>
           </NavLink>
 
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              isActive ? "nav-button active" : "nav-button"
-            }
+          {/* Lien de navigation qui défile vers la section de contact */}
+          <a
+            href="#contact"
+            onClick={handleContactClick}
+            className="nav-button" // Ajout de la classe "nav-button" pour un style cohérent
           >
             <li>Contact</li>
-          </NavLink>
+          </a>
         </ul>
       </div>
     </div>
