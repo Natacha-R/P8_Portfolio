@@ -1058,7 +1058,6 @@ html {
   transform: scale(1.05);
 }
 .contact-section .contact-form {
-  width: 100%;
   max-width: 600px;
   padding-top: 30px;
   padding-bottom: 30px;
