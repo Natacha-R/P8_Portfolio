@@ -1,9 +1,9 @@
 @import "../partials/variables";
 @import "../partials/mixins";
 
-// Page "Logements"
+// Page "projet"
 
-.accommodation-container {
+.project-container {
   margin-bottom: $margin-xxl !important;
   @include flex-container(row, flex-start, stretch);
   gap: 20px;
@@ -16,7 +16,7 @@
   }
 }
 
-.accommodation-header {
+.project-header {
   @include flex-container(row, space-between, flex-start);
   gap: 20px;
   flex-wrap: wrap;
@@ -27,11 +27,11 @@
   }
 }
 
-.title-location {
+.title-project {
   flex: 1;
 }
 
-.titleAccommodation {
+.titleProject {
   margin-top: 0px;
   margin-bottom: 20px;
   @include text-style(36px);
@@ -43,7 +43,7 @@
   }
 }
 
-.placeAccommodation {
+.placeProject {
   margin-top: $margin-xs;
   @include text-style;
 
@@ -133,7 +133,7 @@
   }
 }
 
-.accommodation-details {
+.project-details {
   @include flex-container(row, space-between);
 
   > div {

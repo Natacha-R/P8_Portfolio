@@ -1,4 +1,4 @@
-.accommodation-container {
+.project-container {
   margin-bottom: 60px !important;
   display: flex;
   flex-direction: row;
@@ -7,7 +7,7 @@
   gap: 20px;
 }
 @media (max-width: 425px) {
-  .accommodation-container {
+  .project-container {
     margin-top: 0px;
     margin-bottom: 30px !important;
     padding: 0px;
@@ -15,7 +15,7 @@
   }
 }
 
-.accommodation-header {
+.project-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -25,7 +25,7 @@
   width: 40%;
 }
 @media (max-width: 767px) {
-  .accommodation-header {
+  .project-header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -33,11 +33,11 @@
   }
 }
 
-.title-location {
+.title-project {
   flex: 1;
 }
 
-.titleAccommodation {
+.titleProject {
   margin-top: 0px;
   margin-bottom: 20px;
   font-size: 36px;
@@ -45,19 +45,19 @@
   color: #74412b;
 }
 @media (max-width: 425px) {
-  .titleAccommodation {
+  .titleProject {
     font-size: 18px;
     line-height: 26px;
   }
 }
 
-.placeAccommodation {
+.placeProject {
   margin-top: 5px;
   font-size: 18px;
   font-weight: 500;
 }
 @media (max-width: 425px) {
-  .placeAccommodation {
+  .placeProject {
     font-size: 14px;
     line-height: 20px;
   }
@@ -166,20 +166,20 @@
   }
 }
 
-.accommodation-details {
+.project-details {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
 }
-.accommodation-details > div {
+.project-details > div {
   flex: 1;
   border-radius: 5px;
   max-width: 100%;
   margin-bottom: 20px;
 }
 @media (max-width: 425px) {
-  .accommodation-details {
+  .project-details {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

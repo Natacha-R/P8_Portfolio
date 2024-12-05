@@ -30,14 +30,14 @@ html {
   }
 }
 
-.accommodation-container {
+.project-container {
   width: 90%;
   margin: auto;
   margin-top: 60px;
   min-height: 600px;
 }
 @media (max-width: 425px) {
-  .accommodation-container {
+  .project-container {
     min-height: 0px;
   }
 }

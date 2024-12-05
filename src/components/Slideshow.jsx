@@ -3,7 +3,7 @@ import React, { useState } from "react"; // Importation de la bibliothèque Reac
 import imageFlecheD from "../assets/flecheR.png";
 import imageFlecheG from "../assets/flecheL.png";
 
-// composant Slideshow (diaporama) "logement" avec comme PROPS 'image' (tableau d'images à afficher dans le diaporama).
+// composant Slideshow (diaporama) "projet" avec comme PROPS 'image' (tableau d'images à afficher dans le diaporama).
 
 const Slideshow = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0); // currentIndex : variable d'état qui garde la trace de l'index de l'image actuellement affichée.

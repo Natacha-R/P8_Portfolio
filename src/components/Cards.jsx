@@ -1,27 +1,27 @@
 import React from "react"; // importe React depuis la bibliothèque "react", (permet d'utiliser les fonctionnalités de React dans le fichier).
 import { NavLink } from "react-router-dom"; // Importation du composant NavLink depuis la bibliothèque react router (liens de navigation).
 
-import Card from "./Card"; // composants card, responsable de l'affichage de la carte avec l'image et le titre pour chaque logement.
-import AccommodationList from "../data/logements.json"; // importation des données sur les logements (fichier JSON)
+import Card from "./Card"; // composants card, responsable de l'affichage de la carte avec l'image et le titre pour chaque projet.
+import ProjectsList from "../data/projects.json"; // importation des données sur les projets (fichier JSON)
 
-// composant conteneur cartes logements "Accueil" qui génère la liste de cartes pour les logements à partir des données (logements.json) :
+// composant conteneur cartes projet "Accueil" qui génère la liste de cartes pour les projet à partir des données (projet.json) :
 
 function Cards() {
   return (
-    <div className="AccommodationList">
-      {AccommodationList.map(
+    <div className="ProjectsList">
+      {ProjectsList.map(
         (
-          accommodation // methode 'map' pour parcourir le tableau 'AccommodationList' et créer un composant card pour chaque logement.
+          project // methode 'map' pour parcourir le tableau 'ProjectsList' et créer un composant card pour chaque projet.
         ) => (
           <NavLink
-            to={`/accommodation/${accommodation.id}`} // NavLink crée un lien cliquable pour chaque logement (/accomodation/123).
-            key={accommodation.id} //doit être unique pour chaque élément (identifie chaque élément de manière unique).
+            to={`/project/${project.id}`} // NavLink crée un lien cliquable pour chaque projet (/project/123).
+            key={project.id} //doit être unique pour chaque élément (identifie chaque élément de manière unique).
           >
             <Card
-              id={accommodation.id}
-              image={accommodation.cover}
-              title={accommodation.title}
-              shortDescription={accommodation.short_description}
+              id={project.id}
+              image={project.cover}
+              title={project.title}
+              shortDescription={project.short_description}
             />
           </NavLink>
         )

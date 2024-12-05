@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Accommodation from "./pages/Accommodation";
+import Project from "./pages/Project";
 import Error from "./pages/Error";
 import Footer from "./components/Footer";
 
@@ -56,8 +56,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} /> {/* Page d'accueil */}
         <Route path="/about" element={<About />} /> {/* Page "À propos" */}
-        <Route path="/accommodation/:id" element={<Accommodation />} />{" "}
-        {/* Page de logement */}
+        <Route path="/project/:id" element={<Project />} />{" "}
+        {/* Page de projet */}
         <Route path="*" element={<Error />} /> {/* Page d'erreur */}
       </Routes>
 

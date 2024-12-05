@@ -1,6 +1,6 @@
 import React, { useState } from "react"; // Importation de la bibliothèque React, HOOK qui permet de gérer l'état du composant fonctionnel (si le composant est ouvert ou fermé).
 
-// composant collapse "A Propos" & "logements" avec trois PROPS, title (titre du collapse) className (donner du style) et children (contenu à afficher lorsque le composant est ouvert) :
+// composant collapse "A Propos" & "projet" avec trois PROPS, title (titre du collapse) className (donner du style) et children (contenu à afficher lorsque le composant est ouvert) :
 
 const Collapse = ({ title, className, children }) => {
   const [isOpen, setIsOpen] = useState(false);
