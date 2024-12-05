@@ -18,6 +18,8 @@
   cursor: none; // Suppression du curseur par défaut
 
   .navigation {
+    width: 100%;
+
     @include flex-container(
       row,
       center
@@ -34,6 +36,8 @@
       border-radius: 20px; // Boutons arrondis
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); // Ombre pour la profondeur
       transition: all 0.3s ease-in-out; // Transition fluide pour les interactions
+      margin: 0 $margin-md; // Espace entre les liens
+      text-decoration: none; // Suppression de la décoration des liens
 
       &:hover {
         background-color: lighten(
@@ -48,9 +52,6 @@
         transform: translateY(2px); // Effet d'enfoncement au clic
         box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); // Réduction de l'ombre
       }
-
-      margin: 0 $margin-md; // Espace entre les liens
-      text-decoration: none; // Suppression de la décoration des liens
     }
 
     ul {
@@ -67,14 +68,42 @@
     }
   }
 
-  @include respond-to(mobile) {
-    .navigation {
-      flex-direction: column; // Les éléments passent en colonne sur mobile
+  @media (max-width: 750px) {
+    margin-top: 120px;
+    margin-bottom: 40px;
 
+    .navigation {
       a {
-        width: 100%; // Les boutons prennent toute la largeur
         margin: $margin-xs 0; // Marges verticales entre les boutons
         text-align: center; // Texte centré
+      }
+
+      ul {
+        padding-left: 0px;
+        width: 90%;
+        @include flex-container(
+          column
+        ); // Flexbox pour les éléments de la liste
+      }
+    }
+  }
+
+  @include respond-to(mobile) {
+    margin-top: 140px;
+    margin-bottom: 40px;
+
+    .navigation {
+      a {
+        margin: $margin-xs 0; // Marges verticales entre les boutons
+        text-align: center; // Texte centré
+      }
+
+      ul {
+        padding-left: 0px;
+        width: 90%;
+        @include flex-container(
+          column
+        ); // Flexbox pour les éléments de la liste
       }
     }
   }
