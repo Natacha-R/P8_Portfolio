@@ -42,9 +42,7 @@
       width: 10px;
       height: 20px;
       object-fit: cover;
-    }
 
-    img {
       @include respond-to(mobile) {
         width: 12px;
         height: 20px;
@@ -80,6 +78,11 @@
     .slideshow-counter {
       display: none;
     }
+  }
+
+  @include respond-to(mobile) {
+    margin-top: 20px;
+    width: 100%;
   }
 }
 

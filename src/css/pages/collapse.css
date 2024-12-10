@@ -32,7 +32,8 @@
 }
 @media (max-width: 425px) {
   .collapse-header h2 {
-    font-size: 13px;
+    font-size: 15px;
+    font-weight: 500;
   }
 }
 
@@ -64,7 +65,8 @@
 @media (max-width: 425px) {
   .collapse-content ul {
     margin: 0;
-    font-size: 12px;
+    font-size: 15px;
+    font-weight: 500;
   }
 }
 .collapse-content p {
@@ -74,6 +76,7 @@
 @media (max-width: 425px) {
   .collapse-content p {
     margin: 0;
-    font-size: 12px;
+    font-size: 15px;
+    font-weight: 500;
   }
 }

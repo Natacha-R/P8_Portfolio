@@ -32,7 +32,7 @@
     font-size: 22px;
 
     @include respond-to(mobile) {
-      font-size: 13px;
+      @include text-style(15px);
     }
   }
 }
@@ -65,7 +65,7 @@
 
     @include respond-to(mobile) {
       margin: 0;
-      font-size: 12px;
+      @include text-style(15px);
     }
   }
 
@@ -75,7 +75,7 @@
 
     @include respond-to(mobile) {
       margin: 0;
-      font-size: 12px;
+      @include text-style(15px);
     }
   }
 }

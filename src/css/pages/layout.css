@@ -46,6 +46,12 @@ html {
   }
 }
 
+@media (max-width: 425px) {
+  .project-container {
+    margin-top: 180px;
+  }
+}
+
 .custom-cursor {
   position: fixed;
   top: 0;

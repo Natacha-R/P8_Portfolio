@@ -7,7 +7,7 @@ import Slideshow from "../components/Slideshow";
 import Collapse from "../components/Collapse";
 
 function Project() {
-  const { id } = useParams(); // Hook extrait le paramètre 'id' de l'url (ex: si URL "project/123" alors id = "123")
+  const { id } = useParams(); // Hook extrait le paramètre 'id' de l'url (ex: si URL "project/123" alors id = "123"
   const project = ProjectsList.find((item) => item.id === id); // Cherche dans la liste des projets celui dont l’id correspond à celui extrait de l’URL. (project sera stocké dans project)
 
   if (!project) {

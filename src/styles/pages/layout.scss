@@ -44,6 +44,12 @@ html {
   }
 }
 
+.project-container {
+  @include respond-to(mobile) {
+    margin-top: 180px;
+  }
+}
+
 // Curseur personnalisé
 .custom-cursor {
   position: fixed;
