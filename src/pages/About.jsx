@@ -6,7 +6,7 @@ function About() {
       {/* Section avec photo et présentation */}
       <div className="about-section">
         <div className="about-photo">
-          <img src="../images/photo-profil.jpeg" alt="Ma photo" />
+          <img src="../images/photo-profil.jpeg" alt="Natacha" />
         </div>
         <div className="about-text">
           <h2>À propos de moi</h2>

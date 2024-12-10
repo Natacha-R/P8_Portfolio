@@ -47,7 +47,7 @@ function Project() {
               <p>{difficulties}</p>
             </Collapse>
           </div>
-          <a href={link} target="_blank">
+          <a href={link} target="_blank" rel="noreferrer">
             Lien GitHub
           </a>
         </div>
