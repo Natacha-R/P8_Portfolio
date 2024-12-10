@@ -17,17 +17,17 @@
   .descriptionOverlay {
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: 7px;
     top: 0;
     left: 0;
     right: 0;
-    height: 98%;
     width: 100%;
     color: white;
     background-color: rgba($color: #74593d, $alpha: 0);
     @include text-style(30px, 700);
     z-index: 1000;
     margin: 0;
+    margin-bottom: 5px;
     white-space: pre-wrap;
     padding-top: 20px;
     padding-left: 20px;
@@ -82,7 +82,7 @@
     }
 
     .descriptionOverlay {
-      height: 92%;
+      bottom: 27px;
     }
   }
 

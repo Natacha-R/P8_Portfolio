@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap");
 body {
   font-family: cursive;
   background-color: #fdfaff;
@@ -6,6 +7,11 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+@media (max-width: 425px) {
+  body {
+    font-family: "Charm", cursive;
+  }
 }
 
 /* Ajout d'un défilement fluide pour toute la page */

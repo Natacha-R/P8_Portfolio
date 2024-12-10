@@ -1,5 +1,6 @@
 @import "../partials/variables";
 @import "../partials/mixins";
+@import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap");
 
 // Mise en page générale
 
@@ -10,6 +11,10 @@ body {
   display: flex;
   flex-direction: column; // Organise les éléments verticalement
   min-height: 100vh; // S'assure que le body prend toute la hauteur de la fenêtre
+
+  @include respond-to(mobile) {
+    font-family: "Charm", cursive;
+  }
 }
 
 /* Ajout d'un défilement fluide pour toute la page */
