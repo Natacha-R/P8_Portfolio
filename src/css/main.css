@@ -916,7 +916,7 @@ html {
   max-width: 600px;
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-right: 25px;
+  padding-right: 20px;
   padding-left: 20px;
   border-radius: 8px;
   background: linear-gradient(135deg, #74412b, #c4a4b4);
@@ -934,7 +934,7 @@ html {
 }
 .contact-section .contact-form .form-group input,
 .contact-section .contact-form .form-group textarea {
-  width: 100%;
+  width: 95%;
   border: 1px solid #c4a4b4;
   border-radius: 4px;
   font-size: 1rem;
