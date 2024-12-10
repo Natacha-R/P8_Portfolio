@@ -64,12 +64,6 @@
     margin: 0;
   }
 
-  @include respond-to(desktop) {
-    .cardTitle {
-      font-size: 11px;
-    }
-  }
-
   @include respond-to(tablet) {
     .cardImg {
       aspect-ratio: 16/9;
