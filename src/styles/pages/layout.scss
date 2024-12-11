@@ -40,8 +40,16 @@ html {
   margin-top: 60px;
   min-height: 600px;
 
+  @include respond-to(tablet) {
+    margin-top: 215px;
+  }
+
   @include respond-to(mobile) {
     min-height: 0px;
+    @include flex-container(column);
+    margin-bottom: $margin-lg !important;
+    padding: 0px;
+    gap: 15px;
   }
 }
 

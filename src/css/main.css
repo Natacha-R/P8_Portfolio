@@ -558,11 +558,25 @@ html {
   margin-top: 60px;
   min-height: 600px;
 }
+@media (max-width: 767px) {
+  .project-container,
+  .about-page,
+  .skills-page {
+    margin-top: 215px;
+  }
+}
 @media (max-width: 425px) {
   .project-container,
   .about-page,
   .skills-page {
     min-height: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-bottom: 30px !important;
+    padding: 0px;
+    gap: 15px;
   }
 }
 
