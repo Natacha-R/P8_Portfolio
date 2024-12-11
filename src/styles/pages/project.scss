@@ -7,13 +7,6 @@
   margin-bottom: $margin-xxl !important;
   @include flex-container(row, flex-start, stretch);
   gap: 20px;
-
-  @include respond-to(mobile) {
-    @include flex-container(column);
-    margin-bottom: $margin-lg !important;
-    padding: 0px;
-    gap: 15px;
-  }
 }
 
 .project-header {
