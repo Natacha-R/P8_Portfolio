@@ -67,9 +67,12 @@ function Home() {
       alert("Message envoyé !");
       // Réinitialiser les données du formulaire plus envoi
       emailjs
-        .sendForm("service_2m3dj4q", "template_l3pp64h", form.current, {
-          publicKey: "Z6bRs2FqVZ5iKTf6V",
-        })
+        .sendForm(
+          process.env.REACT_APP_EMAILJS_SERVICE_ID,
+          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+          form.current,
+          process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        )
         .then(
           () => {
             console.log("SUCCESS!");
