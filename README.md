@@ -51,4 +51,4 @@ Cela générera un dossier `build/` contenant les fichiers prêts à être dépl
 
 Le projet est hébergé sur **Azure**. La version construite est déployée via le dossier généré avec `npm run build`.
 
-Le voici : https://lemon-stone-0a3fdb510.4.azurestaticapps.net/
+Le voici : https://orange-moss-0ca91c703.6.azurestaticapps.net
